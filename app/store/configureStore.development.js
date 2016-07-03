@@ -17,12 +17,12 @@ const sagaMiddleware = createSagaMiddleware();
 
 const enhancer = compose(
   applyMiddleware(sagaMiddleware, router, logger),
-  sagaMiddleware.run(rootSaga),
   window.devToolsExtension ? window.devToolsExtension() : noop => noop
 );
 
 export default function configureStore(initialState) {
   const store = createStore(rootReducer, initialState, enhancer);
+  sagaMiddleware.run(rootSaga)
 
   if (module.hot) {
     module.hot.accept('../reducers', () =>
