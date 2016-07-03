@@ -31,7 +31,7 @@ class Counter extends Component {
             <i className="fa fa-minus"></i>
           </button>
           <button className={styles.btn} onClick={incrementIfOdd}>odd</button>
-          <button className={styles.btn} onClick={() => incrementAsync()}>async</button>
+          <button className={styles.btn} onClick={incrementAsync}>async</button>
         </div>
       </div>
     );
