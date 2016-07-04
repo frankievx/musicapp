@@ -5,7 +5,7 @@ import styles from './Sidebar.css';
 export default class Sidebar extends Component {
   render() {
     return (
-      <div className={styles.sidebar}>
+      <div className="w-col w-col-1 sidebar">
         <div className="w-section osx-app-buttons"></div>
         <div className="w-section profile"></div>
         <div className="groups"></div>
