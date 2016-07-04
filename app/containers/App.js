@@ -7,7 +7,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="w-row app">
         {this.props.children}
       </div>
     );
