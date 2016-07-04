@@ -8,8 +8,7 @@ import Hub from './containers/Hub';
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={HomePage} />
-    <Route path="/counter" component={CounterPage} />
+    <IndexRoute component={Hub} />
     <Route path="/hub" component={Hub} />
   </Route>
 );
