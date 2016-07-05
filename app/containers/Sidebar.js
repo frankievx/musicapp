@@ -1,21 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
-
-class Profile extends Component {
-  render() {
-    return (
-      <div className="w-section profile"></div>
-    );
-  }
-}
-
-class Groups extends Component {
-  render() {
-    return (
-      <div className="groups"></div>
-    );
-  }
-}
+import Profile from '../components/Sidebar/SidebarProfile';
+import Groups from '../components/Sidebar/SidebarGroups';
 
 export default class Sidebar extends Component {
   render() {

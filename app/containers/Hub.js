@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Sidebar from '../components/Sidebar';
-import Library from '../components/Library';
-import Main from '../components/Main';
-import Chat from '../components/Chat';
+import Sidebar from './Sidebar';
+import Library from './Library';
+import Main from './Main';
+import Chat from './Chat';
 
 function mapStateToProps(state) {
   return {
