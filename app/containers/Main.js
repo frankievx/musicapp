@@ -1,16 +1,17 @@
-import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
-import Header from '../components/Main/MainHeader';
-import Body from '../components/Main/MainBody';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import Main from '../components/Main/Main';
+import * as SearchActions from '../actions/search_actions';
 
-
-export default class Main extends Component {
-  render() {
-    return (
-      <div className="w-col w-col-6 main">
-      	<Header />
-      	<Body />
-			</div>
-    );
-  }
+function mapStateToProps(state) {
+  return {
+    results: state.results
+  };
 }
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(SearchActions, dispatch);
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Main);
