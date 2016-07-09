@@ -1,3 +1,64 @@
+# MVP Project Scope:
+
+## External platform playlists from the following providers:
+
+* Youtube
+* Spotify: https://developer.spotify.com/technologies/widgets/examples/
+* Soundcloud
+
+## The app needs to do the following:
+### User Account Management
+* Allows users to sign up to our app account - or oAuth through youtube, then add additional info specific to our app, like choose an avatar?
+* Allows users to sign in to any - all of the providers above during initial setup of the user account
+* Allows users to select and  sign in with any of the providers they did not sign in to during initial setup at any time
+* Allows users to edit their profile at any time
+* How are we going to handle token/caching for the users’ credential with other providers? Do we cache forever or as long as the provider tokens are valid?
+
+### User playlists from external providers
+* Imports all user playlists from the providers users select during initial setup
+* Imports all user playlists from the providers users select to sign in at any time
+* Periodic imports of all user playlists from all selected providers to reflect any new changes - how often?
+* Displays all available user playlists separated by providers on sidebar
+* Allows users to click on any of the external provider playlists and add all the songs from that playlist to the play queue
+* Allows users to make new playlists on our app 
+* Allows users to save current play queue as new playlist
+
+### Play 
+* Allows users to drag and drop any songs available from external provider playlists into the play queue
+* Allows users to add any songs they searched to the play queue
+* Plays all available songs from any of the supported providers 
+	* Our own embedded player?
+	* Swaps between provider players, such as YouTube and Spotify?
+* Has an aggressive preloading/caching mechanism to minimize lag time and unsmooth transition
+
+### Search
+* Allows users to search for song title, album title, artist, similar artists...etc?
+* Use Google’s search api?
+* Displays a list of the closest results from all supported providers
+* Allows users to select the result they prefer to use 
+* Allows for a way for a way to save those songs after users select them from search
+* Do they have to add to a playlist in order to save them?
+* Or should there be a songlist for all the songs they selected from search result but have not added to playlist?
+
+
+
+
+
+
+Future exploration:
+
+* PitchFork Review API
+  http://blog.omardelarosa.com/2014/07/pitchfork-api-for-node.html
+
+* Featured Artsts on our own inhouse player
+
+* Ways to donate to both artists and us!!
+
+
+
+
+
+
 # electron-react-boilerplate
 
 [![NPM version][npm-image]][npm-url]
