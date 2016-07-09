@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Select from 'react-select';
+import Option from './Option'
 import styles from 'react-select/dist/react-select.css';
 
 export default class Header extends Component {
@@ -7,6 +8,7 @@ export default class Header extends Component {
 		externalSearch: PropTypes.func.isRequired,
 		results: PropTypes.object.isRequired
 	};
+
 
 	render() {
 		const { options, isFetching, isInvalidated } = this.props.results

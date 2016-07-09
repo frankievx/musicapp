@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import Option from './Option';
 
 
 export default class Player extends Component {
