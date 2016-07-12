@@ -2,9 +2,11 @@ import { combineReducers } from 'redux';
 import { routerReducer as routing } from 'react-router-redux';
 import counter from './counter';
 import results from './results_reducers';
+import queue from './queue_reducers';
 
 const rootReducer = combineReducers({
   results,
+  queue,
   counter,
   routing
 });
