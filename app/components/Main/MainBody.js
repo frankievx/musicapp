@@ -6,14 +6,16 @@ export default class Body extends Component {
 	constructor(props) {
 		super(props);
 		const propTypes = {
-			queue: PropTypes.array.isRequired
+			queue: PropTypes.array.isRequired,
+			dequeue: PropTypes.func.isRequired
 		}
 	}
 	render () {
-		const { queue } = this.props
+		const { queue, dequeue } = this.props
 		return (
 			<div className="main-body">
-				<Player queue={queue}/>
+				<Player queue={queue}
+								dequeue={dequeue}/>
     		<Queue queue={queue}/>
 			</div>
 		);

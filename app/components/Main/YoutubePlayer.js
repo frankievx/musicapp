@@ -14,9 +14,10 @@ export default class YoutubePlayer extends Component {
 		return (
 			<div className="player">
 				<div className="videoWrapper">
+				<div className="ytplayer"></div>
 	      	<iframe width="560" 
 	      					height="349" 
-	      					src={"http://www.youtube.com/embed/"+videoID+"?autoplay=1&rel=0&hd=1"}
+	      					src={"http://www.youtube.com/embed/"+videoID+"?controls=2&enablejsapi=1&autoplay=1&rel=0&hd=1"}
 	      					frameborder="0" 
 	      					allowfullscreen>
 					</iframe>

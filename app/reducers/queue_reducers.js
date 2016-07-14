@@ -6,9 +6,7 @@ export default function queue(state = [], action) {
     	console.log(action.payload);
       return [...state.slice(), action.payload];
     case DEQUEUE:
-      return [...state.slice(0, action.index),
-      	...state.slice(action.index + 1)
-    	];
+      return [...state.slice(1)];
     default:
       return state;
   }
