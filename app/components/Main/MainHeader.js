@@ -18,33 +18,32 @@ export default class Header extends Component {
 		externalSearch: PropTypes.func.isRequired,
 		enqueue: PropTypes.func.isRequired,
 		results: PropTypes.object.isRequired
-
 	};
 
 
 	render() {
 		const { options, isFetching, isInvalidated } = this.props.results
 		const { externalSearch, enqueue } = this.props
-		const asd = 'this'
-		// console.log(options)
+		console.log('results.options', options);
+
 		return (
 			<div className="main-header">
 				<Select className='Select'
 								name="Search"
-								value='search'
+								autosize={false}
 								valueKey='snippet'
+								filterOptions={false}
 								options={options}
 								optionRenderer={this.renderOption}
 								onChange={enqueue}
-								valueRenderer={this.renderValue}
 								onInputChange={(input) => {
 									externalSearch(input)
 									return input;
 								}}
 								isLoading={isFetching}
-
+								onBlurResetsInput={false}
+								onCloseResetsInput={false}
 				/>
-
 			</div>
 		);
 	}
