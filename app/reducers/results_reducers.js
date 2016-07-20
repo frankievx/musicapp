@@ -15,6 +15,7 @@ export default function results(state = initialState, action) {
       });
     case INVALIDATE_RESULTS:
       return Object.assign({}, state, {
+        isFetching: false,
         didInvalidate: true
       });
     case RECEIVE_RESULTS:
