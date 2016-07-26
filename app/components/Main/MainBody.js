@@ -3,13 +3,15 @@ import Player from './Player';
 import Queue from './Queue';
 
 export default class Body extends Component {
-	constructor(props) {
-		super(props);
-		const propTypes = {
+	static propTypes = {
 			queue: PropTypes.array.isRequired,
 			dequeue: PropTypes.func.isRequired
-		}
-	}
+	};
+	
+	constructor(props) {
+		super(props);
+	};
+
 	render () {
 		const { queue, dequeue } = this.props
 		return (
@@ -19,5 +21,5 @@ export default class Body extends Component {
     		<Queue queue={queue}/>
 			</div>
 		);
-	}
+	};
 }

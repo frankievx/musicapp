@@ -20,7 +20,7 @@ export default function results(state = initialState, action) {
       });
     case RECEIVE_RESULTS:
     	return Object.assign({}, state, {
-        options: action.payload.data.items,
+        options: action.payload,
         isFetching: false,
         didInvalidate: false
         // lastUpdated: action.receivedAt

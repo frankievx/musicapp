@@ -269,7 +269,38 @@ a:hover {
     width: 50%;
 }
 
+.soundcloud-option {
+  background-color: #FF6F00;
+  margin: 0 auto;
+  color: white;
+  padding: 0 0 0 0;
+  box-shadow: black;
+  text-align: center;
+  width: 80%;
+  vertical-align: center;
+}
 
+.spotify-option {
+  background-color: #10AA32;
+  margin: 0 auto;
+  color: white;
+  padding: 0 0 0 0;
+  box-shadow: black;
+  text-align: center;
+  width: 80%;
+  vertical-align: center;
+}
+
+.youtube-option {
+  background-color: #E3151A;
+  margin: 0 auto;
+  color: white;
+  padding: 0 0 0 0;
+  box-shadow: black;
+  text-align: center;
+  width: 80%;
+  vertical-align: center;
+}
 
 /**
  * React Select
@@ -509,7 +540,6 @@ a:hover {
   color: #666666;
   cursor: pointer;
   display: block;
-  padding: 8px 10px;
 }
 .Select-option:last-child {
   border-bottom-right-radius: 4px;
